@@ -22,8 +22,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-
-
     </FrameLayout>
 
     <FrameLayout
@@ -42,16 +40,41 @@
             android:layout_height="match_parent">
 
             <RadioButton
+                android:id="@+id/rb_main_shanghai"
                 android:drawableTop="@drawable/selector_main_top_tab_shanghai"
                 android:text="@string/str_main_shanghai"
                 style="@style/main_tab_rb_style" />
 
             <RadioButton
+                android:id="@+id/rb_main_hangzhou"
                 android:drawableTop="@drawable/seletor_main_top_tab_hangzhou"
                 android:text="@string/str_main_hangzhou"
                 style="@style/main_tab_rb_style"/>
 
         </RadioGroup>
+
+
+        <RadioGroup
+            android:id="@+id/rg_main_bottom"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/rb_main_nav_home_beijing"
+                android:drawableTop="@drawable/selector_main_bottom_tab_beijing"
+                android:text="@string/str_main_beijing"
+                style="@style/main_tab_rb_style" />
+
+            <RadioButton
+                android:id="@+id/rb_main_car_source_shenzhen"
+                android:drawableTop="@drawable/seletor_main_bottom_tab_shenzhen"
+                android:text="@string/str_main_shenzhen"
+                style="@style/main_tab_rb_style"/>
+
+        </RadioGroup>
+
 
     </FrameLayout>
 

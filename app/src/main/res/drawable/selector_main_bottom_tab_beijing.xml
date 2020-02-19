@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:drawable="@mipmap/main_tab_shanghai_checked"
+    <item android:drawable="@mipmap/main_tab_beijing_checked"
         android:state_checked="true"/>
-    <item android:drawable="@mipmap/main_tab_shanghai_unchecked"
+    <item android:drawable="@mipmap/main_tab_beijing_unchecked"
         android:state_checked="false"/>
 
 </selector>

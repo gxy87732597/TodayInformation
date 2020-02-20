@@ -1,4 +1,4 @@
-package com.example.todayinformation;
+package com.example.todayinformation.splash;
 import com.example.todayinformation.mvp.ISplashActivityContract;
 import com.example.todayinformation.mvp.base.BaseMvpPresenter;
 

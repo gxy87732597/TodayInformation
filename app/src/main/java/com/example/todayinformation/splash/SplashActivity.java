@@ -1,12 +1,16 @@
-package com.example.todayinformation;
+package com.example.todayinformation.splash;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
+
+import com.example.todayinformation.base.BaseActivity;
+import com.example.todayinformation.main.MainActivity;
+import com.example.todayinformation.R;
+import com.example.todayinformation.base.ViewInject;
 import com.example.todayinformation.mvp.ISplashActivityContract;
 import java.io.File;
 import butterknife.BindView;
@@ -22,14 +26,12 @@ public class SplashActivity extends BaseActivity implements ISplashActivityContr
     private ISplashActivityContract.IPresenter timerPresenter;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
+    public void afterBindView() {
         initTimerPresenter();
         initVideo();
         initListener();
-
     }
+
 
     private void initTimerPresenter() {
         timerPresenter = new SplashTimerPresenter(this);
@@ -47,7 +49,6 @@ public class SplashActivity extends BaseActivity implements ISplashActivityContr
                 mp.start();
             }
         });
-
 
     }
 

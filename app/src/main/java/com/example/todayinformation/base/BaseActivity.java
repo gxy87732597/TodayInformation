@@ -1,15 +1,14 @@
-package com.example.todayinformation;
+package com.example.todayinformation.base;
 
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.todayinformation.mvp.view.LifeCircleMvpActivity;
 
 import butterknife.ButterKnife;
 
-public class BaseActivity extends LifeCircleMvpActivity {
+public abstract class BaseActivity extends LifeCircleMvpActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +18,8 @@ public class BaseActivity extends LifeCircleMvpActivity {
             int mainlayoutid = annotation.mainlayoutid();
             if(mainlayoutid>0){
                 setContentView(mainlayoutid);
-                ButterKnife.bind(this);
+                bindView();
+               afterBindView();
             }else{
                 throw new RuntimeException("mainlayout < 0");
             }
@@ -27,4 +27,12 @@ public class BaseActivity extends LifeCircleMvpActivity {
             throw new RuntimeException("annotation = null");
         }
     }
+
+    public abstract void afterBindView();
+
+    //View依赖注入绑定
+    private void bindView() {
+        ButterKnife.bind(this);
+    }
+
 }

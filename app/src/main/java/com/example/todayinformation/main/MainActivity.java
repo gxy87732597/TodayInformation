@@ -1,6 +1,5 @@
-package com.example.todayinformation;
+package com.example.todayinformation.main;
 
-import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -8,11 +7,13 @@ import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.example.todayinformation.R;
+import com.example.todayinformation.base.BaseActivity;
+import com.example.todayinformation.base.ViewInject;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-
 
 @ViewInject(mainlayoutid = R.layout.activity_main)
 public class MainActivity extends BaseActivity {
@@ -36,10 +37,13 @@ public class MainActivity extends BaseActivity {
     RadioGroup rgMainBottom;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
+    public void afterBindView() {
         changeAnima(rgMainBottom,rgMainTop);
+    }
+
+    //初始化Fragment
+    private void initHomeFragment(){
+
     }
 
     private boolean isChangTopOrBottom;

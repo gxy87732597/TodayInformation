@@ -35,7 +35,6 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.rg_main_bottom)
     RadioGroup rgMainBottom;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
